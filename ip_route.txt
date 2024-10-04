@@ -34,7 +34,8 @@ L       192.168.4.254/32 is directly connected, GigabitEthernet0/1/0
 C       192.168.6.0/30 is directly connected, GigabitEthernet0/3/0
 L       192.168.6.2/32 is directly connected, GigabitEthernet0/3/0
 
-Таблица маршрутизации после добавления статистических маршрутов для Router0:
+Таблица маршрутизации после добавления статистических маршрутов для 
+Router0:
 Gateway of last resort is not set
 
      192.168.1.0/24 is variably subnetted, 2 subnets, 2 masks
@@ -49,10 +50,10 @@ S    192.168.4.0/24 [1/0] via 192.168.6.2
 C       192.168.6.0/30 is directly connected, GigabitEthernet0/3/0
 L       192.168.6.1/32 is directly connected, GigabitEthernet0/3/0
 
-Таблица маршрутизации после добавления статистических маршрутов для Router1:
-S    192.168.1.0/24 [1/0] via 192.168.6.1
-S    192.168.2.0/24 [1/0] via 192.168.6.1
-     192.168.3.0/24 is variably subnetted, 2 subnets, 2 masks
+Router1 после изменения конфигурации и добавления router2:
+S    192.168.1.0/24 [1/0] via 192.168.6.5
+S    192.168.1.0/24 [1/0] via 192.168.6.5 
+    192.168.3.0/24 is variably subnetted, 2 subnets, 2 masks
 C       192.168.3.0/24 is directly connected, GigabitEthernet0/0/0
 L       192.168.3.254/32 is directly connected, GigabitEthernet0/0/0
      192.168.4.0/24 is variably subnetted, 2 subnets, 2 masks
@@ -60,5 +61,16 @@ C       192.168.4.0/24 is directly connected, GigabitEthernet0/1/0
 L       192.168.4.254/32 is directly connected, GigabitEthernet0/1/0
      192.168.6.0/24 is variably subnetted, 2 subnets, 2 masks
 C       192.168.6.0/30 is directly connected, GigabitEthernet0/3/0
-L       192.168.6.2/32 is directly connected, GigabitEthernet0/3/0
+L       192.168.6.254/32 is directly connected, GigabitEthernet0/1/0
+
+Router 2:
+S    192.168.1.0/24 [1/0] via 192.168.6.1
+S    192.168.2.0/24 [1/0] via 192.168.6.1
+S    192.168.3.0/24 [1/0] via 192.168.6.6
+S    192.168.4.0/24 [1/0] via 192.168.6.6
+     192.168.6.0/24 is variably subnetted, 4 subnets, 2 masks
+C       192.168.6.0/30 is directly connected, GigabitEthernet0/0
+L       192.168.6.2/32 is directly connected, GigabitEthernet0/0
+C       192.168.6.4/30 is directly connected, GigabitEthernet0/1
+L       192.168.6.5/32 is directly connected, GigabitEthernet0/1
 
